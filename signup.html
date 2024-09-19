@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-left">
+                <img src="book_icon.png" alt="Logo" class="logo-nav">
+                <h2 class="nav-title">Technocrates</h2>
+            </div>
+            <div class="nav-right">
+                <a href="home.html">Home</a>
+                <a href="bharatiAI.html">BharatiAI <img src="ai.png" alt="ai" width="38px" class="nav-icon"></a>
+                <a href="wallet.html">Wallet</a>
+                <a href="support.html">Support</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Signup Form -->
+    <div class="container">
+        <div class="header">
+            <img src="book_icon.png" alt="Logo" class="logo">
+            <h2 class="title">Travel Mitra</h2>
+        </div>
+        <form action="signup.php" method="POST">
+            <input type="text" name="username" placeholder="Create Username" required>
+            <input type="password" name="password" placeholder="Create Password" required>
+            <input type="password" name="repassword" placeholder="Re-enter Password" required>
+            <input type="email" name="email" placeholder="Email ID" required>
+            <button type="submit" class="animate-btn">Join Us</button>
+        </form>
+        <a href="login.html" class="login-link">Already a member?</a>
+    </div>
+</body>
+</html>
