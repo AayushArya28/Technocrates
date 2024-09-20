@@ -21,24 +21,74 @@
                 <a href="wallet.html">Wallet</a>
                 <a href="support.html">Support</a>
                 <a href="contact.html">Contact Us</a>
+                <!-- Add the Sign In button -->
+                <a href="signup.html" class="sign-in-btn">Sign In</a>
             </div>
         </div>
     </nav>
+    
 
-    <!-- Signup Form -->
-    <div class="container">
-        <div class="header">
-            <img src="book_icon.png" alt="Logo" class="logo">
-            <h2 class="title">Travel Mitra</h2>
+    <!-- Main Content Area -->
+    <main>
+        <div class="container">
+            <div class="header">
+                <img src="book_icon.png" alt="Logo" class="logo" width="38px">
+                <h2 class="title">Travel Mitra</h2>
+            </div>
+            <form action="signup.php" method="POST">
+                <input type="text" name="username" placeholder="Create Username" required>
+                <input type="password" name="password" placeholder="Create Password" required>
+                <input type="password" name="repassword" placeholder="Re-enter Password" required>
+                <input type="email" name="email" placeholder="Email ID" required>
+                <button type="submit" class="animate-btn">Join Us</button>
+            </form>
+            <a href="login.html" class="login-link">Already a member?</a>
         </div>
-        <form action="signup.php" method="POST">
-            <input type="text" name="username" placeholder="Create Username" required>
-            <input type="password" name="password" placeholder="Create Password" required>
-            <input type="password" name="repassword" placeholder="Re-enter Password" required>
-            <input type="email" name="email" placeholder="Email ID" required>
-            <button type="submit" class="animate-btn">Join Us</button>
-        </form>
-        <a href="login.html" class="login-link">Already a member?</a>
-    </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <img src="book_icon.png" alt="Logo" class="logo-footer" width="38px">
+                <h2 class="footer-title">Technocrates</h2>
+            </div>
+            <div class="footer-center">
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="signup.html">Sign Up</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="support.html">Support</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Other Websites</h3>
+                    <ul>
+                        <li><a href="https://www.irctc.co.in">IRCTC</a></li>
+                        <li><a href="https://www.redbus.in">RedBus</a></li>
+                        <li><a href="https://www.makemytrip.com">MakeMyTrip</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-right">
+                <h3>Subscribe to Newsletter</h3>
+                <form>
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">SUBSCRIBE</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>©2024 Technocrates. All rights reserved. | A Hackathon project model</p>
+            <div class="footer-social-icons">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+                <a href="#">Youtube</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
