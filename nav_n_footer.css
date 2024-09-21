@@ -1,0 +1,226 @@
+* {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav-left a{
+    text-decoration: none;
+    margin: o;
+    padding: 0%;
+}
+
+.nav-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo-nav {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.nav-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
+
+/* Style for the Sign In button */
+.sign-in-btn {
+    background-color: #8157f5;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.sign-in-btn:hover {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+}
+
+/* Ensure the Sign In button stays at the end of the nav bar */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: flex-end;
+}
+
+
+.nav-right a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.nav-right a:hover {
+    color: #8157f5;
+}
+
+.nav-icon {
+    margin-left: 5px;
+    /* Adds some space between text and image */
+    vertical-align: middle;
+    /* Aligns image with text */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 720px;
+    /* Ensures the footer sticks to the bottom */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1;
+}
+
+.footer-logo {
+    width: 50px;
+    height: 50px;
+}
+
+.footer-table {
+    width: 100%;
+    text-align: left;
+    color: white;
+    border-spacing: 0 15px;
+    /* Adds space between rows */
+    width: 35vw;
+}
+
+.footer-table th {
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.footer-table td {
+    padding: auto 7px;
+    font-size: 15px;
+    /* Adds more padding to the table rows */
+}
+
+.footer-table a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-table a:hover {
+    text-decoration: underline;
+}
+
+.footer-right form input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 15vw;
+    margin-right: 10px;
+}
+
+.footer-right form button {
+    padding: 10px;
+    background-color: #8157f5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.footer-right form button:hover {
+    background-color: #d8d7da;
+    color: #8157f5;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #444;
+}
+
+.footer-social-icons {
+    margin-top: 10px;
+}
+
+.footer-social-icons a {
+    margin: 0 5px;
+    display: inline-block;
+}
+
+/* Footer Subscribe Form */
+.subscribe-form {
+    display: flex;
+    justify-content: flex-start; /* Align items next to each other */
+    align-items: center;
+    gap: 10px; /* Adds space between input and button */
+}
+
+.subscribe-form input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 70%; /* Adjusts the width of the input box */
+}
+
+.subscribe-form button {
+    padding: 10px 20px;
+    background-color: #8157f5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-form button:hover {
+    background-color: #d8d7da;
+    color: black;
+}
