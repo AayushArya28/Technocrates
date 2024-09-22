@@ -40,11 +40,11 @@
 
     <script>
         // Load the navbar
-        fetch('nav.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('nav-placeholder').innerHTML = data;
-            });
+        fetch('nav.php')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('nav-placeholder').innerHTML = data;
+        });
 
         // Load the footer
         fetch('footer.html')

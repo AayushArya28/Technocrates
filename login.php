@@ -1,38 +1,37 @@
 <?php
-// Database connection
-$conn = new mysqli('localhost', 'root', '', 'user_management');
+session_start();  // Start session to store user information
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-// Login form submission
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // Fetch the user from the database
+    // Database connection
+    $conn = mysqli_connect('localhost', 'root', '', 'user_management');
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+
+// Check if the username exists and compare passwords directly
     $sql = "SELECT * FROM users WHERE username = '$username'";
-    $result = $conn->query($sql);
+    $result = mysqli_query($conn, $sql);
+    
+    if (mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
 
-    if ($result->num_rows > 0) {
-        // User exists, now verify the password
-        $row = $result->fetch_assoc();
-
-        if (password_verify($password, $row['password'])) {
-            // Password is correct
-            echo "Login successful!";
-            // Start a session and redirect to a welcome page or dashboard
-            session_start();
-            $_SESSION['username'] = $username;
-            header("Location: dashboard.php");
+        // Check if the password matches
+        if ($password == $row['password']) {
+            // Store username in session after successful login
+            $_SESSION['username'] = $username;  
+            header("Location: landing.php");  // Redirect to landing page
+            exit();
         } else {
             echo "Incorrect password!";
         }
     } else {
-        echo "User not found!";
+        echo "No user found with that username.";
     }
-}
 
-$conn->close();
+    // Close connection
+    mysqli_close($conn);
+}
 ?>

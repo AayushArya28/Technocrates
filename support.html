@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,30 +9,34 @@
     <link rel="stylesheet" href="nav_n_footer.css">
     <link rel="stylesheet" href="contact_support.css">
 </head>
+
 <body>
+
     <!-- Navigation Bar -->
     <div id="nav-placeholder"></div>
-    
+
+    <!-- main content -->
+
     <main>
         <div class="container">
             <h2>Support</h2>
-            <form action="submit_support.php" method="POST">
+            <form action="support.php" method="POST">
                 <label for="name">Full Name</label>
                 <input type="text" id="name" name="name" placeholder="Your Name" required>
-                
+
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" placeholder="Your Email" required>
-                
+
                 <label for="issue">Issue Type</label>
                 <select id="issue" name="issue" required>
                     <option value="technical">Technical Issue</option>
                     <option value="billing">Billing Issue</option>
                     <option value="general">General Inquiry</option>
                 </select>
-                
-                <label for="details">Details</label>
-                <textarea id="details" name="details" placeholder="Describe your issue" required></textarea>
-                
+
+                <label for="description">Details</label>
+                <textarea id="description" name="description" placeholder="Describe your issue" required></textarea>
+
                 <button type="submit">Submit</button>
             </form>
         </div>
@@ -42,11 +47,11 @@
 
     <script>
         // Load the navbar
-        fetch('nav.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('nav-placeholder').innerHTML = data;
-            });
+        fetch('nav.php')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('nav-placeholder').innerHTML = data;
+        });
 
         // Load the footer
         fetch('footer.html')
@@ -56,4 +61,5 @@
             });
     </script>
 </body>
+
 </html>

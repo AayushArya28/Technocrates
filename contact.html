@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,52 +9,38 @@
     <link rel="stylesheet" href="nav_n_footer.css">
     <link rel="stylesheet" href="contact_support.css">
 </head>
+
 <body>
     <!-- Navigation Bar -->
     <div id="nav-placeholder"></div>
-    
+
+
+    <!-- main content -->
     <main>
         <div class="container">
             <h2>Contact Us</h2>
 
-            <form action="submit_contact.php" method="POST">
+            <form action="contact.php" method="POST">
                 <label for="name">Full Name</label>
                 <input type="text" id="name" name="name" placeholder="Your Name" required>
-                
+
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" placeholder="Your Email" required>
-                
-                <label for="subject">Subject/Reason</label>
-                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+
+                <label for="subj">Subject:</label>
+                <input type="text" id="subj" name="subj" required>
+
 
                 <label for="message">Message</label>
                 <textarea id="message" name="message" placeholder="Write your message" required></textarea>
 
                 <br>
-                <button type="submit">Login</button>
+                <button type="submit">Send</button>
             </form>
 
-
-            <!-- <form action="submit_contact.php" method="POST">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
-                
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
-                
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                
-                <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="Write your message" required></textarea>
-                
-                <button type="submit">Submit</button>
-            </form> -->
         </div>
     </main>
 
-
-    
 
 
     <!-- Footer Section -->
@@ -61,11 +48,11 @@
 
     <script>
         // Load the navbar
-        fetch('nav.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('nav-placeholder').innerHTML = data;
-            });
+        fetch('nav.php')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('nav-placeholder').innerHTML = data;
+        });
 
         // Load the footer
         fetch('footer.html')
@@ -75,4 +62,5 @@
             });
     </script>
 </body>
+
 </html>
