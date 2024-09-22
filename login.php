@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = $_POST['password'];
 
     // Database connection
-    $conn = mysqli_connect('localhost', 'root', '', 'user_management');
+    $conn = mysqli_connect('sql304.infinityfree.com', 'if0_37361852', 'vntHjq25ac9Ry', 'if0_37361852_user_management');
     if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());
     }

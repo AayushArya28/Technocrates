@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $message = htmlspecialchars($_POST['message']);
     
     // Database connection
-    $conn = mysqli_connect('localhost', 'root', '', 'user_management');
+    $conn = mysqli_connect('sql304.infinityfree.com', 'if0_37361852', 'vntHjq25ac9Ry', 'if0_37361852_user_management');
 
     // Check connection
     if (!$conn) {
